@@ -16,3 +16,16 @@ class linled_List:
                     break
                 curr = curr.Next
             curr.Next = new_Node
+    def add_front_list(self,data):
+        new_node = Node(data)
+        temp = self.head
+        self.head = new_node
+        new_node.Next = temp
+        del temp
+    def print_List(self):
+        print_list = self.head
+        while True:
+            print(print_list.data)
+            if print_list.Next is None:
+                break
+            print_list = print_list.Next
